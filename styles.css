@@ -1,0 +1,64 @@
+body {
+    margin:0;
+    font-family: Inter, sans-serif;
+    background:#0B0F14;
+    color:#E5E7EB;
+}
+
+.app {
+    display:flex;
+    height:100vh;
+}
+
+.sidebar {
+    width:260px;
+    background:#111827;
+    padding:20px;
+    overflow-y:auto;
+    border-right:1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    color:#22D3EE;
+    margin-bottom:20px;
+}
+
+.sidebar input {
+    width:100%;
+    padding:8px;
+    background:#0B0F14;
+    border:1px solid #333;
+    color:white;
+    margin-bottom:15px;
+}
+
+.sidebar a {
+    display:block;
+    padding:8px;
+    cursor:pointer;
+    color:#9CA3AF;
+}
+
+.sidebar a:hover {
+    color:#22D3EE;
+}
+
+main {
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+}
+
+#content h1, h2, h3 {
+    color:#22D3EE;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border:1px solid rgba(255,255,255,0.1);
+    padding:8px;
+}
