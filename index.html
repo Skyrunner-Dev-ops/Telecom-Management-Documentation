@@ -43,7 +43,7 @@
             <a onclick="loadDoc('TROUBLESHOOTING.md')">Troubleshooting</a>
         </nav>
     </aside>
-
+<div id="overlay"></div>
     <!-- Content -->
     <main>
         <div id="content">Loading documentation...</div>
@@ -56,8 +56,28 @@
 <script>
 loadDoc("README.md");
 
-document.getElementById("menuBtn").addEventListener("click", () => {
-    document.getElementById("sidebar").classList.toggle("open");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+const menuBtn = document.getElementById("menuBtn");
+
+// Toggle menu
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
+
+// Close when clicking overlay
+overlay.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
+});
+
+// Close when clicking menu item
+document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+    });
 });
 </script>
 
