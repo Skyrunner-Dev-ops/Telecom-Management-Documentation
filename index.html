@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Telecom Forensic Docs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telecom Forensic Docs</title>
 
 <link rel="stylesheet" href="styles.css">
 
@@ -13,15 +13,20 @@
 
 <body>
 
+<header class="mobile-header">
+    <button id="menuBtn">☰</button>
+    <h1>📡 TelForensic Docs</h1>
+</header>
+
 <div class="app">
 
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
         <h2 class="logo">📡 TelForensic Docs</h2>
 
         <input type="text" id="searchInput" placeholder="Search docs...">
 
-        <nav id="nav">
+        <nav>
             <a onclick="loadDoc('README.md')">Overview</a>
             <a onclick="loadDoc('FEATURES.md')">Features</a>
             <a onclick="loadDoc('ARCHITECTURE.md')">Architecture</a>
@@ -47,8 +52,13 @@
 </div>
 
 <script src="app.js"></script>
+
 <script>
 loadDoc("README.md");
+
+document.getElementById("menuBtn").addEventListener("click", () => {
+    document.getElementById("sidebar").classList.toggle("open");
+});
 </script>
 
 </body>
