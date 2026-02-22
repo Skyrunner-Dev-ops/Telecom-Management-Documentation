@@ -32,7 +32,9 @@ Access is strictly governed by the user's assigned role (`admin`, `investigator`
 ### CSRF (Cross-Site Request Forgery)
 - **Status**: Enabled Globally.
 - Every state-changing request (POST, PUT, DELETE) requires a cryptographically secure CSRF token.
-- Forms in the UI must include the `{% csrf_token %}` tag, or the request will be automatically rejected.
+- Forms in the UI must include the {% raw %}
+{% csrf_token %}
+{% endraw %} tag, or the request will be automatically rejected.
 
 ### SQL Injection Prevention
 - **Status**: Protected by Design.
