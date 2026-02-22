@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Telecom Forensic Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="search.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">📡 TelForensic Docs</h2>
+
+        <input type="text" id="searchInput" placeholder="Search docs...">
+
+        <nav id="nav">
+            <a onclick="loadDoc('README.md')">Overview</a>
+            <a onclick="loadDoc('FEATURES.md')">Features</a>
+            <a onclick="loadDoc('ARCHITECTURE.md')">Architecture</a>
+            <a onclick="loadDoc('DATABASE_SCHEMA.md')">Database</a>
+            <a onclick="loadDoc('MODULES.md')">Modules</a>
+            <a onclick="loadDoc('DATA_FLOW.md')">Data Flow</a>
+            <a onclick="loadDoc('ANALYSIS_ENGINE.md')">Analysis Engine</a>
+            <a onclick="loadDoc('FORENSIC_USE_CASES.md')">Use Cases</a>
+            <a onclick="loadDoc('SECURITY.md')">Security</a>
+            <a onclick="loadDoc('SETUP.md')">Setup</a>
+            <a onclick="loadDoc('USER_GUIDE.md')">User Guide</a>
+            <a onclick="loadDoc('ADMIN_GUIDE.md')">Admin Guide</a>
+            <a onclick="loadDoc('TESTING.md')">Testing</a>
+            <a onclick="loadDoc('TROUBLESHOOTING.md')">Troubleshooting</a>
+        </nav>
+    </aside>
+
+    <!-- Content -->
+    <main>
+        <div id="content">Loading documentation...</div>
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+loadDoc("README.md");
+</script>
+
+</body>
+</html>
